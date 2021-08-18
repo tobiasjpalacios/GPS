@@ -1,13 +1,15 @@
 ﻿// Created for MagicSQL using MagicMaker [v.3.77.125.7055]
 
-using System;
 using MagicSQL;
+using System;
 
 namespace GPS
 {
     public partial class Proyecto : ISUD<Proyecto>
     {
-        public Proyecto() : base(2) { } // base(SPs_Version)
+        public Proyecto() : base(2)
+        {
+        } // base(SPs_Version)
 
         // Properties
 

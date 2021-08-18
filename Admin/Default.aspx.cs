@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class _Default : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        string usuarioLogueado = GetSecurity().Username;
+
         List<GPS.Proyecto> proyectos = new GPS.Proyecto().Select();
     }
 
-    protected void AddUsuario(object sender , EventArgs e)
+    protected void AddUsuario(object sender, EventArgs e)
     {
         Response.Redirect("register.aspx");
     }
@@ -26,8 +24,15 @@ public partial class _Default : System.Web.UI.Page
     {
         Response.Redirect("Informe.aspx");
     }
+
     protected void IrPrincipal(object sender, EventArgs e)
     {
         Response.Redirect("Default.aspx");
+    }
+
+    protected void lnkSalir_Click(object sender, EventArgs e)
+    {
+        Util.DeleteCookie("Admin");
+        Util.GoTo("Login.aspx");
     }
 }

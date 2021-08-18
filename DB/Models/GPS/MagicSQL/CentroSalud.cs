@@ -1,13 +1,14 @@
 ﻿// Created for MagicSQL using MagicMaker [v.3.77.125.7055]
 
-using System;
 using MagicSQL;
 
 namespace GPS
 {
     public partial class CentroSalud : ISUD<CentroSalud>
     {
-        public CentroSalud() : base(1) { } // base(SPs_Version)
+        public CentroSalud() : base(1)
+        {
+        } // base(SPs_Version)
 
         // Properties
 
