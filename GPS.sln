@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{B525226B-4EF9-4348-8798-3C7D9FA19397}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SaludReproductiva", "SaludReproductiva\", "{F444D4FE-B40C-441C-8647-6566D7A40188}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{b525226b-4ef9-4348-8798-3c7d9fa19397}|DB.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61818"
+		Debug.AspNetCompiler.PhysicalPath = "SaludReproductiva\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61818\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61818"
+		Release.AspNetCompiler.PhysicalPath = "SaludReproductiva\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61818\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61818"
+		SlnRelativePath = "SaludReproductiva\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Admin", "Admin\", "{4F345ED0-1462-49AE-958A-07313C24A2E9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{b525226b-4ef9-4348-8798-3c7d9fa19397}|DB.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61839"
+		Debug.AspNetCompiler.PhysicalPath = "Admin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61839\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61839"
+		Release.AspNetCompiler.PhysicalPath = "Admin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61839\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61839"
+		SlnRelativePath = "Admin\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B525226B-4EF9-4348-8798-3C7D9FA19397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525226B-4EF9-4348-8798-3C7D9FA19397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B525226B-4EF9-4348-8798-3C7D9FA19397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B525226B-4EF9-4348-8798-3C7D9FA19397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F444D4FE-B40C-441C-8647-6566D7A40188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F444D4FE-B40C-441C-8647-6566D7A40188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F444D4FE-B40C-441C-8647-6566D7A40188}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F444D4FE-B40C-441C-8647-6566D7A40188}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4F345ED0-1462-49AE-958A-07313C24A2E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F345ED0-1462-49AE-958A-07313C24A2E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F345ED0-1462-49AE-958A-07313C24A2E9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F345ED0-1462-49AE-958A-07313C24A2E9}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2906C4B9-3C40-426A-8A0E-5D89AFE2A6A4}
+	EndGlobalSection
+EndGlobal
