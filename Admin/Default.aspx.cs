@@ -7,12 +7,18 @@ public partial class _Default : BasePage
     {
         string usuarioLogueado = GetSecurity().Username;
 
+       
         List<GPS.Proyecto> proyectos = new GPS.Proyecto().Select();
     }
 
     protected void AddUsuario(object sender, EventArgs e)
     {
         Response.Redirect("register.aspx");
+    }
+
+    protected void GoProyectos(object sender, EventArgs e)
+    {
+        Response.Redirect("Proyectos.aspx");
     }
 
     protected void ListaUsuario(object sender, EventArgs e)
@@ -28,6 +34,11 @@ public partial class _Default : BasePage
     protected void IrPrincipal(object sender, EventArgs e)
     {
         Response.Redirect("Default.aspx");
+    }
+
+    protected void CargaCentro(object sender, EventArgs e)
+    {
+        Response.Redirect("Centros.aspx");
     }
 
     protected void lnkSalir_Click(object sender, EventArgs e)

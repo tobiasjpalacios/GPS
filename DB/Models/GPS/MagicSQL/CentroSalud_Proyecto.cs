@@ -5,13 +5,13 @@ using MagicSQL;
 
 namespace GPS
 {
-    public partial class Proyecto_Usuario : ISUD<Proyecto_Usuario>
+    public partial class CentroSalud_Proyecto : ISUD<CentroSalud_Proyecto>
     {
-        public Proyecto_Usuario() : base(2) { } // base(SPs_Version)
+        public CentroSalud_Proyecto() : base(2) { } // base(SPs_Version)
 
         // Properties
 
-        public int IdProyecto_Usuario { get; set; }
+        public int IdCentroSalud_Proyecto { get; set; }
 
         public DateTime Alta { get; set; }
 
@@ -20,7 +20,5 @@ namespace GPS
         public int IdCentroSalud { get; set; }
 
         public int IdProyecto { get; set; }
-
-        public int IdUsuario { get; set; }
     }
 }

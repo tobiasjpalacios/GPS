@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\GPS\MagicSQL\CentroSalud.cs" />
+    <Compile Include="Models\GPS\MagicSQL\CentroSalud_Proyecto.cs" />
     <Compile Include="Models\GPS\MagicSQL\Proyecto.cs" />
     <Compile Include="Models\GPS\MagicSQL\Proyecto_Usuario.cs" />
     <Compile Include="Models\GPS\MagicSQL\Usuario.cs" />

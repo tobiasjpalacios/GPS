@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Linq;
+using System.Collections.Generic;
 
 public partial class Login : System.Web.UI.Page
 {
@@ -8,16 +13,24 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+
+        
         string username = txtuser.Text.Trim().ToLower();
         string password = txtcontra.Text.Trim();
 
-        if (username == "usuario" && password == "1234")
+       
+        List<GPS.Usuario> ingreso = new GPS.Usuario().Select().Where(usuario => (usuario.Password.ToLower().Trim() == password.ToLower().Trim()) && (usuario.Username.ToLower().Trim() == username.ToLower().Trim()) && (usuario.Baja == null)).ToList();
+
+
+
+
+        if (ingreso.Count > 0 )
         {
+            
             Security security = new Security()
             {
-                IdUsuario = 1,
-                Username = "usuario",
-                OcultarControles = true
+             IdUsuario = ingreso.FirstOrDefault().IdUsuario
+             
             };
             string json = security.ToJson();
             string encrypted = Util.Encrypt(json);
@@ -27,6 +40,7 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
+            Util.ExecJsScript("$('#mdlError').modal('show');");
             // Usuario y/o contraseña invalido
         }
     }
