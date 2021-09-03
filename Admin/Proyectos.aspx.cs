@@ -91,8 +91,8 @@ public partial class Proyectos : BasePage
             string id = proyecto.IdProyecto.ToString();
             Button btnDelete = (Button)e.Row.FindControl("btnDelete");
             Button btnEditar = (Button)e.Row.FindControl("btnEditar");
-            Button btnGuardarEdicion = (Button)FindControl("btnGuardarEdicion");
-            btnGuardarEdicion.CommandArgument = id;
+           
+            
             btnEditar.CommandArgument = id;
             btnDelete.CommandArgument = id;
             DataTable dt = new SP("GPS").Execute("usp_proyeto_centro", P.Add("id", id));
@@ -155,7 +155,10 @@ public partial class Proyectos : BasePage
 
     protected void btnEditar_Click(object sender, EventArgs e)
     {
+
         string id = ((Button)sender).CommandArgument;
+        Button btnGuardarEdicion = (Button)Page.FindControl("btnGuardarEdicion");
+        btnGuardarEdicion.CommandArgument = id;
         GPS.Proyecto py = new GPS.Proyecto().Select(id.ToInt());
         p_name.Text = py.Nombre;
         List<GPS.CentroSalud_Proyecto> relacion =  new GPS.CentroSalud_Proyecto().Select().Where(proy => proy.IdProyecto == id.ToInt()).ToList();
@@ -224,7 +227,7 @@ public partial class Proyectos : BasePage
             var id_center = listItem.Value;
             if (listItem.Selected)
             {
-                if (relacion.Count == 0)
+                if (relacion.Count != 0)
                 {
                     GPS.CentroSalud_Proyecto rela = new GPS.CentroSalud_Proyecto()
                     {
